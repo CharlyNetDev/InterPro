@@ -8,6 +8,6 @@
         public string Url { get; set; }
         public string TestCase { get; set; }
         public string ResultadoEsperado { get; set; }
-
+        public string Rol { get; set; }
     }
 }

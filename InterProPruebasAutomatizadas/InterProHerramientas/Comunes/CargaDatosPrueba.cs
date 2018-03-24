@@ -18,7 +18,8 @@ namespace InterProHerramientas.Comunes
                                  Contrasenia = row["Password"].Cast<string>(),
                                  Url = row["Url"].Cast<string>(),
                                  ResultadoEsperado = row["ResultadoEsperado"].Cast<string>(),
-                                 Navegador = row["Browser"].Cast<string>()
+                                 Navegador = row["Browser"].Cast<string>(),
+                                 Rol = row["Rol"].Cast<string>()
                              }
                              select item).ToList();
             book.Dispose();
