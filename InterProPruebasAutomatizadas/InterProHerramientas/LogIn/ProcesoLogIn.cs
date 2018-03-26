@@ -98,5 +98,144 @@ namespace InterProHerramientas.LogIn
             return resultado;
         }
 
+        public bool AccesoNoExitosoWEPIDContraseniaIncorrecto(string pathArchivo)
+        {
+            bool resultado = false;
+            IWebDriver driver = null;
+            var listaDatosPrueba = datosPrueba.CargaDatos(pathArchivo);
+            var elementos = listaDatosPrueba.Count;
+
+            try
+            {
+                for (int i = 0; i < elementos; i++)
+                {
+                    if (listaDatosPrueba[i].TestCase.Equals("Contrasenia_Incorrecta"))
+                    {
+                        driver = navegadorPruba.LanzarNavegador(listaDatosPrueba[i]);
+                        driver.Navigate().GoToUrl(listaDatosPrueba[i].Url);
+                        elementosLogInPrueba.UsuarioWEPID(driver).SendKeys(listaDatosPrueba[i].Usuario);
+                        elementosLogInPrueba.ContraseniaWEPID(driver).SendKeys(listaDatosPrueba[i].Contrasenia);
+                        elementosLogInPrueba.ContraseniaWEPID(driver).Submit();
+                        Thread.Sleep(2000);
+                        if (elementosLogInPrueba.UsuarioIncorrecto(driver).Text.Equals("Usuario y/o contraseña incorrectos, intente de nuevo."))
+                            resultado = true;
+
+                        driver.Close();
+                    }
+                }
+            }
+            catch
+            {
+                resultado = false;
+            }
+
+            return resultado;
+        }
+
+        public bool AccesoNoExitosoWEPIDSinUsuario(string pathArchivo)
+        {
+            bool resultado = false;
+            IWebDriver driver = null;
+            var listaDatosPrueba = datosPrueba.CargaDatos(pathArchivo);
+            var elementos = listaDatosPrueba.Count;
+
+            try
+            {
+                for (int i = 0; i < elementos; i++)
+                {
+                    if (listaDatosPrueba[i].TestCase.Equals("Sin_Usuario"))
+                    {
+                        driver = navegadorPruba.LanzarNavegador(listaDatosPrueba[i]);
+                        driver.Navigate().GoToUrl(listaDatosPrueba[i].Url);
+                        //elementosLogInPrueba.UsuarioWEPID(driver).SendKeys(listaDatosPrueba[i].Usuario);
+                        elementosLogInPrueba.ContraseniaWEPID(driver).SendKeys(listaDatosPrueba[i].Contrasenia);
+                        elementosLogInPrueba.ContraseniaWEPID(driver).Submit();
+                        Thread.Sleep(2000);
+                        if (elementosLogInPrueba.SinUsuario(driver).Text.Equals("Ingrese su usuario"))
+                            resultado = true;
+
+                        driver.Close();
+                    }
+                }
+            }
+            catch
+            {
+                resultado = false;
+            }
+
+            return resultado;
+        }
+
+        public bool AccesoNoExitosoWEPIDSinContrasenia(string pathArchivo)
+        {
+            bool resultado = false;
+            IWebDriver driver = null;
+            var listaDatosPrueba = datosPrueba.CargaDatos(pathArchivo);
+            var elementos = listaDatosPrueba.Count;
+
+            try
+            {
+                for (int i = 0; i < elementos; i++)
+                {
+                    if (listaDatosPrueba[i].TestCase.Equals("Sin_Contrasenia"))
+                    {
+                        driver = navegadorPruba.LanzarNavegador(listaDatosPrueba[i]);
+                        driver.Navigate().GoToUrl(listaDatosPrueba[i].Url);
+                        elementosLogInPrueba.UsuarioWEPID(driver).SendKeys(listaDatosPrueba[i].Usuario);
+                        //elementosLogInPrueba.ContraseniaWEPID(driver).SendKeys(listaDatosPrueba[i].Contrasenia);
+                        elementosLogInPrueba.ContraseniaWEPID(driver).Submit();
+                        Thread.Sleep(2000);
+                        if (elementosLogInPrueba.SinContrasenia(driver).Text.Equals("Ingrese su contraseña"))
+                            resultado = true;
+
+                        driver.Close();
+                    }
+                }
+            }
+            catch
+            {
+                resultado = false;
+            }
+
+            return resultado;
+        }
+
+        public bool AccesoNoExitosoWEPIDSinDatos(string pathArchivo)
+        {
+            bool resultado = false;
+            IWebDriver driver = null;
+            var listaDatosPrueba = datosPrueba.CargaDatos(pathArchivo);
+            var elementos = listaDatosPrueba.Count;
+
+            try
+            {
+                for (int i = 0; i < elementos; i++)
+                {
+                    if (listaDatosPrueba[i].TestCase.Equals("Sin_Datos"))
+                    {
+                        driver = navegadorPruba.LanzarNavegador(listaDatosPrueba[i]);
+                        driver.Navigate().GoToUrl(listaDatosPrueba[i].Url);
+                        //elementosLogInPrueba.UsuarioWEPID(driver).SendKeys(listaDatosPrueba[i].Usuario);
+                        //elementosLogInPrueba.ContraseniaWEPID(driver).SendKeys(listaDatosPrueba[i].Contrasenia);
+                        elementosLogInPrueba.ContraseniaWEPID(driver).Submit();
+                        Thread.Sleep(2000);
+                        if (elementosLogInPrueba.SinUsuario(driver).Text.Equals("Ingrese su usuario"))
+                            if (elementosLogInPrueba.SinContrasenia(driver).Text.Equals("Ingrese su contraseña"))
+                            resultado = true;
+
+                        driver.Close();
+                    }
+                }
+            }
+            catch
+            {
+                resultado = false;
+            }
+
+            return resultado;
+        }
+
+
+
     }
 }

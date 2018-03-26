@@ -24,5 +24,33 @@ namespace InterProPruebasAutomatizadas
             string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
             Assert.AreEqual(true, LogInWEPID.AccesoNoExitosoWEPIDUsuarioIncorrecto(pathArchivo));
         }
+
+        [TestMethod]
+        public void LogInContraseniaIncorrecto()
+        {
+            string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
+            Assert.AreEqual(true, LogInWEPID.AccesoNoExitosoWEPIDUsuarioIncorrecto(pathArchivo));
+        }
+
+        [TestMethod]
+        public void LogInSinUsuario()
+        {
+            string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
+            Assert.AreEqual(true, LogInWEPID.AccesoNoExitosoWEPIDSinUsuario(pathArchivo));
+        }
+
+        [TestMethod]
+        public void LogInSinContrasenia()
+        {
+            string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
+            Assert.AreEqual(true, LogInWEPID.AccesoNoExitosoWEPIDSinContrasenia(pathArchivo));
+        }
+
+        [TestMethod]
+        public void LogInSinUsurioYContrasenia()
+        {
+            string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
+            Assert.AreEqual(true, LogInWEPID.AccesoNoExitosoWEPIDSinDatos(pathArchivo));
+        }
     }
 }

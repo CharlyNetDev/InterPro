@@ -21,5 +21,18 @@ namespace InterProHerramientas.LogIn
             IWebElement mensajeUsuarioIncorrecto = driver.FindElement(By.XPath("html/body/form/div/div[2]/div[1]/div[1]/ul/li"));
             return mensajeUsuarioIncorrecto;
         }
+
+        public IWebElement SinUsuario(IWebDriver driver)
+        {
+            IWebElement mensajeSinUsuario = driver.FindElement(By.XPath("html/body/form/div/div[2]/div[1]/div[2]/span/span"));
+            return mensajeSinUsuario;
+        }
+
+        public IWebElement SinContrasenia(IWebDriver driver)
+        {
+            IWebElement mensajeSinContrasenia = driver.FindElement(By.XPath("/html/body/form/div/div[2]/div[1]/div[3]/span/span"));
+            return mensajeSinContrasenia;
+        }
+
     }
 }
