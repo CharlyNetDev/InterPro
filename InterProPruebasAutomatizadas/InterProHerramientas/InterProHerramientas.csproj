@@ -85,6 +85,8 @@
     <Compile Include="LogIn\ElementosLogIn.cs" />
     <Compile Include="LogIn\ElementosMenuPrincipal.cs" />
     <Compile Include="LogIn\ProcesoLogIn.cs" />
+    <Compile Include="PlanesServicio\ElementosPlanServicio.cs" />
+    <Compile Include="PlanesServicio\ProcesoPlanServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
