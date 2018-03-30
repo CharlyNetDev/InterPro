@@ -1,8 +1,6 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Edge;
 
 namespace InterProHerramientas.Comunes
 {
@@ -23,6 +21,12 @@ namespace InterProHerramientas.Comunes
 
                 driver = new ChromeDriver(opciones);
             }
+
+            if (objetosPrueba.Navegador.Equals("FireFox"))
+            {
+                driver = new FirefoxDriver("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\bin\\Debug");
+            }
+
             return driver;
         }
 

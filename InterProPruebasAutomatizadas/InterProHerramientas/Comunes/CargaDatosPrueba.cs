@@ -42,7 +42,8 @@ namespace InterProHerramientas.Comunes
                                  CostoPlan = row["CostoPlan"].Cast<string>(),
                                  Descripcion = row["Descripcion"].Cast<string>(),
                                  ServicioBuro = row["ServicioBuro"].Cast<string>(),
-                                 ServicioTarjeta = row ["ServicioTarjeta"].Cast<string>()
+                                 ServicioTarjeta = row["ServicioTarjeta"].Cast<string>(),
+                                 Tipo = row["Tipo"].Cast<string>()
                              }
                              select item).ToList();
             book.Dispose();

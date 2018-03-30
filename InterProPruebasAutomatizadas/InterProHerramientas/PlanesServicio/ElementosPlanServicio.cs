@@ -1,9 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Support;
+﻿using OpenQA.Selenium;
 
 namespace InterProHerramientas.PlanesServicio.Elementos
 {
@@ -15,11 +10,10 @@ namespace InterProHerramientas.PlanesServicio.Elementos
             agregarPlan = driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[2]/div[2]/a"));
             return agregarPlan;
         }
-  
+
         public IWebElement ElementosPlanServiciAgregarPlan(IWebDriver driver)
         {
-            IWebElement agregarPlan = null;
-            agregarPlan = driver.FindElement(By.Id("btn-crear"));
+            IWebElement agregarPlan = driver.FindElement(By.Id("btn-crear"));
             return agregarPlan;
         }
 
@@ -45,15 +39,30 @@ namespace InterProHerramientas.PlanesServicio.Elementos
 
         public IWebElement ElementosPlanServicioServiciosBuro(IWebDriver driver)
         {
-            IWebElement Buro = driver.FindElement(By.Id("primerSelect"));
-            return Buro;
-
+            IWebElement buro = driver.FindElement(By.ClassName("ckbox"));
+            //(By.XPath("html/body/div[4]/div[1]/article/form/div/div[4]/div/label[2]"));
+            return buro;
         }
 
-        //public void ElementosPlanServicioServiciosBuro(IWebDriver driver)
-        //{
-        //    driver.FindElement(By.Id("primerSelect")).Click();
+        public IWebElement ElementosPlanServicioServiciosTarjeta(IWebDriver driver)
+        {
+            IWebElement tarjeta = driver.FindElement(By.XPath("html/body/div[4]/div[1]/article/form/div/div[4]/div/label[3]"));
+            return tarjeta;
+        }
 
+
+        //span/input[@name='payslipradio' and @value='6']
+        // SELECCIONA (CLICK) AL CHECK "BURÓ DE CRÉDITO"
+        //public IWebElement ElementosPlanServicioServiciosBuro(IWebDriver driver)
+        //{
+        //    IWebElement Buro = driver.FindElement(By.TagName("a72f8b6f-519e-458b-8868-2c4733a7711f"));
+        //    return Buro;
         //}
+
+
+        //SELECCIONA(CLICK) AL CHECK "BURÓ DE CRÉDITO"
+
+
+
     }
 }

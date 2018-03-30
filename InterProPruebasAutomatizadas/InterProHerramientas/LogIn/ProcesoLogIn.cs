@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using System.Windows.Input;
-using System.Windows.Forms;
-using System.Drawing;
-using Microsoft.VisualStudio.TestTools.UITesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UITest.Extension;
-using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Support;
+﻿using OpenQA.Selenium;
 using System.Threading;
 
 namespace InterProHerramientas.LogIn
@@ -31,7 +20,7 @@ namespace InterProHerramientas.LogIn
 
             try
             {
-                for (int i = 0; i < elementos; i++)
+                for (int i = 0; i < elementos - 1; i++)
                 {
                     if (listaDatosPrueba[i].TestCase.Equals("Acceso_exitoso"))
                     {
@@ -40,7 +29,7 @@ namespace InterProHerramientas.LogIn
                         elementosLogInPrueba.UsuarioWEPID(driver).SendKeys(listaDatosPrueba[i].Usuario);
                         elementosLogInPrueba.ContraseniaWEPID(driver).SendKeys(listaDatosPrueba[i].Contrasenia);
                         elementosLogInPrueba.ContraseniaWEPID(driver).Submit();
-                        Thread.Sleep(2000);
+                        Thread.Sleep(7000);
                         for (int elemntosMenu = 1; elemntosMenu <= 6; elemntosMenu++)
                         {
                             if (menuPrincipal.ElementoMenu(driver, elemntosMenu).Displayed)
@@ -221,7 +210,7 @@ namespace InterProHerramientas.LogIn
                         Thread.Sleep(2000);
                         if (elementosLogInPrueba.SinUsuario(driver).Text.Equals("Ingrese su usuario"))
                             if (elementosLogInPrueba.SinContrasenia(driver).Text.Equals("Ingrese su contraseña"))
-                            resultado = true;
+                                resultado = true;
 
                         driver.Close();
                     }
