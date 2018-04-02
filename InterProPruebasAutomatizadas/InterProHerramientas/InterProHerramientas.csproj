@@ -80,8 +80,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comunes\CargaDatosPrueba.cs" />
+    <Compile Include="Comunes\GeneracionCadenas.cs" />
     <Compile Include="Comunes\InterproteccionObjetos.cs" />
     <Compile Include="Comunes\Navegadores.cs" />
+    <Compile Include="Empleados\ElementosEmpleados.cs" />
     <Compile Include="LogIn\ElementosLogIn.cs" />
     <Compile Include="LogIn\ElementosMenuPrincipal.cs" />
     <Compile Include="LogIn\ProcesoLogIn.cs" />

@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using System.Collections.Generic;
 
 namespace InterProHerramientas.PlanesServicio.Elementos
 {
@@ -50,19 +51,77 @@ namespace InterProHerramientas.PlanesServicio.Elementos
             return tarjeta;
         }
 
+        public IWebElement ElementosPlanServicioPaginado(IWebDriver driver, int pagina)
+        {
+            IWebElement paginado = driver.FindElement(By.XPath("//*[@id='tabla-planes_paginate']/span/a[" + pagina + "]"));
+            return paginado;
+        }
 
-        //span/input[@name='payslipradio' and @value='6']
-        // SELECCIONA (CLICK) AL CHECK "BURÓ DE CRÉDITO"
-        //public IWebElement ElementosPlanServicioServiciosBuro(IWebDriver driver)
-        //{
-        //    IWebElement Buro = driver.FindElement(By.TagName("a72f8b6f-519e-458b-8868-2c4733a7711f"));
-        //    return Buro;
-        //}
+        public IWebElement ElementosPlanServicioRegistro(IWebDriver driver, int registro)
+        {
+            IWebElement registroCapturado = driver.FindElement(By.XPath("//*[@id='tabla-planes']/tbody/tr[" + registro + "]/td[2]"));
+            return registroCapturado;
+        }
 
+        public int ElementosPlanServicioNumeroRegistros(IWebDriver driver, int pagina)
+        {
+            var totalRegistros = driver.FindElements(By.XPath("//*[@id='tabla-planes']/tbody/tr[' ']/td[2]"));
+            return totalRegistros.Count;
+        }
 
-        //SELECCIONA(CLICK) AL CHECK "BURÓ DE CRÉDITO"
+        public IWebElement ElementosPlanServicioMensajeNombre(IWebDriver driver)
+        {
+            IWebElement mensajeNombrePlan = driver.FindElement(By.XPath("/html/body/div[4]/div[1]/article/form/div/div[1]/div/span[2]"));
+            return mensajeNombrePlan;
+        }
 
+        public IWebElement ElementosPlanServicioMensajeDescripcion(IWebDriver driver)
+        {
+            IWebElement mensajeNombrePlan = driver.FindElement(By.XPath("/html/body/div[4]/div[1]/article/form/div/div[3]/div/span"));
+            return mensajeNombrePlan;
+        }
 
+        public IWebElement ElementosPlanServicioMensajeServicios(IWebDriver driver)
+        {
+            IWebElement mensajeNombrePlan = driver.FindElement(By.XPath("/html/body/div[4]/div[1]/article/form/div/div[4]/div/span"));
+            return mensajeNombrePlan;
+        }
+
+        public IWebElement ElementosPlanServicioMensajeLongitudNombre(IWebDriver driver)
+        {
+            IWebElement mensajeNombrePlan = driver.FindElement(By.XPath("/html/body/div[4]/div[1]/article/form/div/div[1]/div/span[2]"));
+            return mensajeNombrePlan;
+        }
+
+        public IWebElement ElementosPlanServicioMensajeLongitudDescripcion(IWebDriver driver)
+        {
+            IWebElement mensajeNombrePlan = driver.FindElement(By.XPath("/html/body/div[4]/div[1]/article/form/div/div[3]/div/span"));
+            return mensajeNombrePlan;
+        }
+
+        public IWebElement ElementosPlanServicioMensajeDuplicado(IWebDriver driver)
+        {
+            IWebElement mensajeNombrePlan = driver.FindElement(By.XPath("/html/body/div[4]/div[1]/article/form/div/div[4]/div/span"));
+            return mensajeNombrePlan;
+        }
+
+        public IWebElement ElementosPlanServicioEstatusPlan(IWebDriver driver, string nombrePlan)
+        {
+            IWebElement mensajeNombrePlan = driver.FindElement(By.XPath("//*[@data-nombre-plan='" + nombrePlan + "']"));
+            return mensajeNombrePlan;
+        }
+
+        public IWebElement ElementosPlanServicioInactivarPlanConfirmar(IWebDriver driver)
+        {
+            IWebElement mensajeNombrePlan = driver.FindElement(By.XPath("//*[@id='btn-modal-confirmar']"));
+            return mensajeNombrePlan;
+        }
+
+        public IWebElement ElementosPlanServicioEditarPlan(IWebDriver driver, int registro)
+        {
+            IWebElement mensajeNombrePlan = driver.FindElement(By.XPath("//*[@id='tabla-planes']/tbody/tr[" + registro + "]/td[5]/a/i"));
+            return mensajeNombrePlan;
+        }
 
     }
 }

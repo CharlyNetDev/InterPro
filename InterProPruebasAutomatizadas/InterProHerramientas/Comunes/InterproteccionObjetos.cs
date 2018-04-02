@@ -15,5 +15,6 @@
         public string ServicioBuro { get; set; }
         public string ServicioTarjeta { get; set; }
         public string Tipo { get; set; }
+        public string NombreAnterior { get; set; }
     }
 }

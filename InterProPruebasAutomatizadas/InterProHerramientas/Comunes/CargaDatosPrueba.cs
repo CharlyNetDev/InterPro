@@ -43,7 +43,8 @@ namespace InterProHerramientas.Comunes
                                  Descripcion = row["Descripcion"].Cast<string>(),
                                  ServicioBuro = row["ServicioBuro"].Cast<string>(),
                                  ServicioTarjeta = row["ServicioTarjeta"].Cast<string>(),
-                                 Tipo = row["Tipo"].Cast<string>()
+                                 Tipo = row["Tipo"].Cast<string>(),
+                                 NombreAnterior = row["NombreAnterior"].Cast<string>()
                              }
                              select item).ToList();
             book.Dispose();
