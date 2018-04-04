@@ -31,7 +31,7 @@ namespace InterProPruebasAutomatizadas
         }
 
         [TestMethod]
-        public void PlanServicio_004_ValidacionCampos()
+        public void PlanServicio_004_ValidacionLongitudCampos()
         {
             string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
             Assert.AreEqual(true, planServcioWEPID.ProcesoAltaPlanesServicioValidarLongitudCampos(pathArchivo));

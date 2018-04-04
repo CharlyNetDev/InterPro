@@ -19,8 +19,12 @@ namespace InterProHerramientas.LogIn
         {
             IWebElement elementoMenu = driver.FindElement(By.Id("sub-opt-planes-servicios"));
             return elementoMenu;
+        }
 
-            //*[@id="sub-opt-planes-servicios"]
+        public IWebElement ElementoSubMenuEmpleados(IWebDriver driver)
+        {
+            IWebElement elementoMenu = driver.FindElement(By.Id("sub-opt-usuarios"));
+            return elementoMenu;
         }
     }
 }

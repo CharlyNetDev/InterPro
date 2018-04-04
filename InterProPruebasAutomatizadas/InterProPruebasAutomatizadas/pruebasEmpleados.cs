@@ -4,53 +4,51 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace InterProPruebasAutomatizadas
 {
-    /// <summary>
-    /// Summary description for CodedUITest1
-    /// </summary>
     [CodedUITest]
-    public class PruebasLogin
+    public class pruebasEmpleados
     {
-        InterProHerramientas.LogIn.ProcesoLogIn LogInWEPID = new InterProHerramientas.LogIn.ProcesoLogIn();
+        InterProHerramientas.Empleados.ProcesoEmpleados empleadosWEPID = new InterProHerramientas.Empleados.ProcesoEmpleados();
+
         [TestMethod]
-        public void LogIn_001_ExitosoWEPID()
+        public void Empleados_001_CreacionDatosObligatorios()
         {
             string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, LogInWEPID.AccesoExitosoWEPID(pathArchivo));
+            Assert.AreEqual(true, empleadosWEPID.AltaEmpleadoDatosObligatorios(pathArchivo));
         }
 
         [TestMethod]
-        public void LogIn_002_UsuarioIncorrecto()
+        public void Empleados_002_ValidacionCamposObligatorios()
         {
             string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, LogInWEPID.AccesoNoExitosoWEPIDUsuarioIncorrecto(pathArchivo));
+            Assert.AreEqual(true, empleadosWEPID.EmpleadoValidarCampos(pathArchivo));
         }
 
         [TestMethod]
-        public void LogIn_003_ContraseniaIncorrecto()
+        public void Empleados_003_ValidacionCamposLongitud()
         {
             string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, LogInWEPID.AccesoNoExitosoWEPIDUsuarioIncorrecto(pathArchivo));
+            Assert.AreEqual(true, empleadosWEPID.EmpleadosValidarLongitudCampos(pathArchivo));
         }
 
         [TestMethod]
-        public void LogIn_004_SinUsuario()
+        public void Empleados_004_ValidacionUsuarioDuplicado()
         {
             string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, LogInWEPID.AccesoNoExitosoWEPIDSinUsuario(pathArchivo));
+            Assert.AreEqual(true, empleadosWEPID.EmpleadosValidacionUsuarioDuplicado(pathArchivo));
         }
 
         [TestMethod]
-        public void LogIn_005_SinContrasenia()
+        public void Empleados_005_ValidacionEliminarUsuario()
         {
             string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, LogInWEPID.AccesoNoExitosoWEPIDSinContrasenia(pathArchivo));
+            Assert.AreEqual(true, empleadosWEPID.EmpleadosValidarEliminar(pathArchivo));
         }
 
         [TestMethod]
-        public void LogIn_006_SinUsurioYContrasenia()
+        public void Empleados_006_ValidacionReactivacionUsuario()
         {
             string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, LogInWEPID.AccesoNoExitosoWEPIDSinDatos(pathArchivo));
+            Assert.AreEqual(true, empleadosWEPID.ReactivacionEmpleadoDatosObligatorios(pathArchivo));
         }
     }
 }

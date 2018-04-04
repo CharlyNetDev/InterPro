@@ -16,5 +16,9 @@
         public string ServicioTarjeta { get; set; }
         public string Tipo { get; set; }
         public string NombreAnterior { get; set; }
+        public string NombreUsuario { get; set; }
+        public string CorreoElectronico { get; set; }
+
+
     }
 }

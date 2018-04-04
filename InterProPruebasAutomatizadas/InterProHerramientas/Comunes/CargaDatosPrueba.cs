@@ -50,5 +50,26 @@ namespace InterProHerramientas.Comunes
             book.Dispose();
             return resultado;
         }
+
+        public List<Comunes.InterproteccionObjetos> CargaDatosEmpleados(string pathFichero)
+        {
+            var book = new ExcelQueryFactory(pathFichero);
+            var resultado = (from row in book.Worksheet("Empleados")
+                             let item = new Comunes.InterproteccionObjetos
+                             {
+                                 TestCase = row["CasoPrueba"].Cast<string>(),
+                                 Usuario = row["Usuario"].Cast<string>(),
+                                 Contrasenia = row["Password"].Cast<string>(),
+                                 Url = row["Url"].Cast<string>(),
+                                 ResultadoEsperado = row["ResultadoEsperado"].Cast<string>(),
+                                 Navegador = row["Browser"].Cast<string>(),
+                                 NombreUsuario = row["NombreUsuario"].Cast<string>(),
+                                 CorreoElectronico = row["CorreoElectronico"].Cast<string>(),
+                                 Rol = row["Rol"].Cast<string>()
+                             }
+                             select item).ToList();
+            book.Dispose();
+            return resultado;
+        }
     }
 }

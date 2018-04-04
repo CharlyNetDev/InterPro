@@ -37,7 +37,7 @@ namespace InterProHerramientas.PlanesServicio
                         elementosLogInPrueba.ContraseniaWEPID(driver).Submit();
                         Thread.Sleep(3000);
 
-                        menuPrincipal.ElementoMenu(driver, 7).Click();
+                        menuPrincipal.ElementoMenu(driver, 6).Click();
                         Thread.Sleep(3000);
                         menuPrincipal.ElementoSubMenuPlanDeServicio(driver).Click();
                         Thread.Sleep(3000);
@@ -114,7 +114,7 @@ namespace InterProHerramientas.PlanesServicio
                         elementosLogInPrueba.ContraseniaWEPID(driver).Submit();
                         Thread.Sleep(3000);
 
-                        menuPrincipal.ElementoMenu(driver, 7).Click();
+                        menuPrincipal.ElementoMenu(driver, 6).Click();
                         Thread.Sleep(3000);
                         menuPrincipal.ElementoSubMenuPlanDeServicio(driver).Click();
                         Thread.Sleep(3000);
@@ -190,7 +190,7 @@ namespace InterProHerramientas.PlanesServicio
                         elementosLogInPrueba.ContraseniaWEPID(driver).Submit();
                         Thread.Sleep(3000);
 
-                        menuPrincipal.ElementoMenu(driver, 7).Click();
+                        menuPrincipal.ElementoMenu(driver, 6).Click();
                         Thread.Sleep(3000);
                         menuPrincipal.ElementoSubMenuPlanDeServicio(driver).Click();
                         Thread.Sleep(3000);
@@ -236,7 +236,7 @@ namespace InterProHerramientas.PlanesServicio
                         elementosLogInPrueba.ContraseniaWEPID(driver).Submit();
                         Thread.Sleep(3000);
 
-                        menuPrincipal.ElementoMenu(driver, 7).Click();
+                        menuPrincipal.ElementoMenu(driver, 6).Click();
                         Thread.Sleep(3000);
                         menuPrincipal.ElementoSubMenuPlanDeServicio(driver).Click();
                         Thread.Sleep(3000);
@@ -287,7 +287,7 @@ namespace InterProHerramientas.PlanesServicio
                         elementosLogInPrueba.ContraseniaWEPID(driver).Submit();
                         Thread.Sleep(3000);
 
-                        menuPrincipal.ElementoMenu(driver, 7).Click();
+                        menuPrincipal.ElementoMenu(driver, 6).Click();
                         Thread.Sleep(3000);
                         menuPrincipal.ElementoSubMenuPlanDeServicio(driver).Click();
                         Thread.Sleep(3000);
@@ -351,7 +351,7 @@ namespace InterProHerramientas.PlanesServicio
                         elementosLogInPrueba.ContraseniaWEPID(driver).Submit();
                         Thread.Sleep(3000);
 
-                        menuPrincipal.ElementoMenu(driver, 7).Click();
+                        menuPrincipal.ElementoMenu(driver, 6).Click();
                         Thread.Sleep(3000);
                         menuPrincipal.ElementoSubMenuPlanDeServicio(driver).Click();
                         Thread.Sleep(3000);
@@ -414,7 +414,7 @@ namespace InterProHerramientas.PlanesServicio
                         elementosLogInPrueba.ContraseniaWEPID(driver).Submit();
                         Thread.Sleep(3000);
 
-                        menuPrincipal.ElementoMenu(driver, 7).Click();
+                        menuPrincipal.ElementoMenu(driver, 6).Click();
                         Thread.Sleep(3000);
                         menuPrincipal.ElementoSubMenuPlanDeServicio(driver).Click();
                         Thread.Sleep(3000);
@@ -477,7 +477,7 @@ namespace InterProHerramientas.PlanesServicio
                         elementosLogInPrueba.ContraseniaWEPID(driver).Submit();
                         Thread.Sleep(3000);
 
-                        menuPrincipal.ElementoMenu(driver, 7).Click();
+                        menuPrincipal.ElementoMenu(driver, 6).Click();
                         Thread.Sleep(3000);
                         menuPrincipal.ElementoSubMenuPlanDeServicio(driver).Click();
                         Thread.Sleep(3000);
@@ -583,7 +583,7 @@ namespace InterProHerramientas.PlanesServicio
                         elementosLogInPrueba.ContraseniaWEPID(driver).Submit();
                         Thread.Sleep(3000);
 
-                        menuPrincipal.ElementoMenu(driver, 7).Click();
+                        menuPrincipal.ElementoMenu(driver, 6).Click();
                         Thread.Sleep(3000);
                         menuPrincipal.ElementoSubMenuPlanDeServicio(driver).Click();
                         Thread.Sleep(3000);
