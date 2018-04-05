@@ -48,7 +48,7 @@ namespace InterProPruebasAutomatizadas
         public void Empleados_006_ValidacionReactivacionUsuario()
         {
             string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, empleadosWEPID.ReactivacionEmpleadoDatosObligatorios(pathArchivo));
+            Assert.AreEqual(true, empleadosWEPID.EmpleadosReactivacionDatosObligatorios(pathArchivo));
         }
     }
 }
