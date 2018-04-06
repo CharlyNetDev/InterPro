@@ -63,7 +63,7 @@ namespace InterProHerramientas.Empleados
                             Thread.Sleep(2000);
                             for (int indice = 1; indice <= elementosEmpleadosPrueba.ElementosEmpleadosNumeroRegistros(driver, pagina); indice++)
                             {
-                                if (elementosEmpleadosPrueba.ElementosEmpleadosRegistro(driver, indice).Text.Equals(listaDatosPrueba[i].NombrePlan))
+                                if (elementosEmpleadosPrueba.ElementosEmpleadosRegistro(driver, indice).Text.Equals(listaDatosPrueba[i].NombreUsuario))
                                 {
                                     resultado = true;
                                     buscar = false;
@@ -324,7 +324,7 @@ namespace InterProHerramientas.Empleados
                             Thread.Sleep(2000);
                             for (int indice = 1; indice <= elementosEmpleadosPrueba.ElementosEmpleadosNumeroRegistros(driver, pagina); indice++)
                             {
-                                if (elementosEmpleadosPrueba.ElementosEmpleadosRegistro(driver, indice).Text.Equals(listaDatosPrueba[i].NombrePlan))
+                                if (elementosEmpleadosPrueba.ElementosEmpleadosRegistro(driver, indice).Text.Equals(listaDatosPrueba[i].NombreUsuario))
                                 {
                                     resultado = true;
                                     buscar = false;
@@ -387,7 +387,7 @@ namespace InterProHerramientas.Empleados
                             Thread.Sleep(2000);
                             for (int indice = 1; indice <= elementosEmpleadosPrueba.ElementosEmpleadosNumeroRegistros(driver, pagina); indice++)
                             {
-                                if (elementosEmpleadosPrueba.ElementosEmpleadosRegistro(driver, indice).Text.Equals(listaDatosPrueba[i].NombrePlan))
+                                if (elementosEmpleadosPrueba.ElementosEmpleadosRegistro(driver, indice).Text.Equals(listaDatosPrueba[i].NombreUsuario))
                                 {
                                     resultado = true;
                                     buscar = false;
