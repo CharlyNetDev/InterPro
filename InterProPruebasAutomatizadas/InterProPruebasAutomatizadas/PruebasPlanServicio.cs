@@ -3,10 +3,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace InterProPruebasAutomatizadas
 {
+    
     [TestClass]
     public class PruebasPlanServicio
     {
-
+     
         InterProHerramientas.PlanesServicio.ProcesoPlanServicio planServcioWEPID = new InterProHerramientas.PlanesServicio.ProcesoPlanServicio();
         [TestMethod]
         public void PlanServicio_001_CreacionDatosObligatorios()
@@ -65,7 +66,7 @@ namespace InterProPruebasAutomatizadas
             Assert.AreEqual(true, planServcioWEPID.ProcesoEdicionPlanesServicioDatosObligatorios(pathArchivo));
         }
 
-        public void PlanServicio_008_EditarPlanTodosCampos()
+        public void PlanServicio_009_EditarPlanTodosCampos()
         {
             string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
             Assert.AreEqual(true, planServcioWEPID.ProcesoEdicionPlanesServicioDatosObligatorios(pathArchivo));

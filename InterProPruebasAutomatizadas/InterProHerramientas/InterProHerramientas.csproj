@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Comunes\DatosPrueba.xlsx" />
+    <None Include="Comunes\TestList.csv.csv" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools;
 
 
 namespace InterProPruebasAutomatizadas
@@ -9,6 +10,10 @@ namespace InterProPruebasAutomatizadas
     {
         InterProHerramientas.Empleados.ProcesoEmpleados empleadosWEPID = new InterProHerramientas.Empleados.ProcesoEmpleados();
 
+        public TestContext TestContext { get; set; }
+
+        private const string _OrderedTestFilename = "TestList.csv";
+               
         [TestMethod]
         public void Empleados_001_CreacionDatosObligatorios()
         {
