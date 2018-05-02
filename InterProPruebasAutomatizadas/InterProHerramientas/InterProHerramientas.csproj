@@ -79,17 +79,20 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clientes\ElementosClientes.cs" />
     <Compile Include="Comunes\CargaDatosPrueba.cs" />
     <Compile Include="Comunes\GeneracionCadenas.cs" />
     <Compile Include="Comunes\InterproteccionObjetos.cs" />
     <Compile Include="Comunes\Navegadores.cs" />
-    <Compile Include="Empleados\ElementosEmpleados.cs" />
-    <Compile Include="Empleados\ProcesoEmpleados.cs" />
+    <Compile Include="Configuracion\Empleados\ElementosEmpleados.cs" />
+    <Compile Include="Configuracion\Empleados\ProcesoEmpleados.cs" />
+    <Compile Include="Configuracion\PreguntasFrecuentes\ElementosPreguntasFrecuentes.cs" />
+    <Compile Include="Configuracion\Roles\ElementosRoles.cs" />
     <Compile Include="LogIn\ElementosLogIn.cs" />
     <Compile Include="LogIn\ElementosMenuPrincipal.cs" />
     <Compile Include="LogIn\ProcesoLogIn.cs" />
-    <Compile Include="PlanesServicio\ElementosPlanServicio.cs" />
-    <Compile Include="PlanesServicio\ProcesoPlanServicio.cs" />
+    <Compile Include="Configuracion\PlanesServicio\ElementosPlanServicio.cs" />
+    <Compile Include="Configuracion\PlanesServicio\ProcesoPlanServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +105,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
