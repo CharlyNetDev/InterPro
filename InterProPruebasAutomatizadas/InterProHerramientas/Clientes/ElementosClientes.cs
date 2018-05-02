@@ -122,5 +122,69 @@ namespace InterProHerramientas.Clientes.Elementos
             return telefonoCelular;
         }
 
+        //Metodo para identificar elementos de de la sección de clientes.
+        public IWebElement ElementosClienteCalleyNumero(IWebDriver driver)
+        {
+            //Identificar el elemento para Agregar la Calle y número del cliente.
+            IWebElement calleNumero = driver.FindElement(By.Id("CalleNumero"));
+            return calleNumero;
+        }
+
+        //Metodo para identificar elementos de de la sección de clientes.
+        public IWebElement ElementosClienteCodigoPostal(IWebDriver driver)
+        {
+            //Identificar el elemento para Agregar el código postal del cliente.
+            IWebElement codigoPostal = driver.FindElement(By.Id("CodigoPostal"));
+            return codigoPostal;
+        }
+
+        //Metodo para identificar elementos de de la sección de clientes.
+        public IWebElement ElementosClienteEstado(IWebDriver driver)
+        {
+            //Identificar el elemento para Agregar el código postal del cliente.
+            IWebElement codigoPostal = driver.FindElement(By.Id("Estado"));
+            return codigoPostal;
+        }
+
+        //Metodo para identificar elementos de de la sección de clientes.
+        public IWebElement ElementosClienteCiudad(IWebDriver driver)
+        {
+            //Identificar el elemento para Agregar la ciudad del cliente.
+            IWebElement ciudadCliente = driver.FindElement(By.Id("Ciudad"));
+            return ciudadCliente;
+        }
+
+        //Metodo para identificar elementos de de la sección de clientes.
+        public IWebElement ElementosClienteDelegacionMunicipio(IWebDriver driver)
+        {
+            //Identificar el elemento para Agregar el Municipio del cliente.
+            IWebElement municipioDelegacionCliente = driver.FindElement(By.Id("Municipio"));
+            return municipioDelegacionCliente;
+        }
+
+        //Metodo para identificar elementos de de la sección de clientes.
+        public IWebElement ElementosClienteDelegacionColonia(IWebDriver driver)
+        {
+            //Identificar el elemento para Agregar la Colonia del cliente.
+            IWebElement coloniaCliente = driver.FindElement(By.Id("Colonia"));
+            return coloniaCliente;
+        }
+
+        //Metodo para identificar elementos de de la sección de clientes.
+        public IWebElement ElementosClientePestanaDatosUsuario(IWebDriver driver)
+        {
+            //Identificar el elemento para seleccionar los datos del usuario.
+            IWebElement datosUsusarioCliente = driver.FindElement(By.Id("datos-tab"));
+            return datosUsusarioCliente;
+        }
+
+        //Metodo para identificar elementos de de la sección de clientes.
+        public IWebElement ElementosClientePestanaDatosUsuario(IWebDriver driver)
+        {
+            //Identificar el elemento para seleccionar los datos del usuario.
+            IWebElement datosUsusarioCliente = driver.FindElement(By.Id("datos-tab"));
+            return datosUsusarioCliente;
+        }
+
     }
 }
