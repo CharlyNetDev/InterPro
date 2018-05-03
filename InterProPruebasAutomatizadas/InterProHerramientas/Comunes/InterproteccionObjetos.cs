@@ -23,5 +23,6 @@
         public string Pregunta { get; set; }
         public string Respuesta { get; set; }
         public string TipoPrueba { get; set; }
+        public string PreguntaEditada { get; set; }
     }
 }

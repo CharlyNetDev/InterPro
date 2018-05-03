@@ -51,6 +51,7 @@ namespace InterProHerramientas.Comunes
             return resultado;
         }
 
+        //Metodo para extraer la informacion del excel para los casos de prueba de empleados.
         public List<Comunes.InterproteccionObjetos> CargaDatosEmpleados(string pathFichero)
         {
             var book = new ExcelQueryFactory(pathFichero);
@@ -72,10 +73,10 @@ namespace InterProHerramientas.Comunes
             return resultado;
         }
 
+        //Metodo para extraer la informacion del excel para los casos de prueba de Preguntas Frecuentes.
         public List<Comunes.InterproteccionObjetos> CargaDatosPreguntasFrecuentes(string pathFichero)
         {
-            //Categoria	Activar	Pregunta	Respuesta	TipoPrueba
-
+    
             var book = new ExcelQueryFactory(pathFichero);
             var resultado = (from row in book.Worksheet("PreguntasFrecuentes")
                              let item = new Comunes.InterproteccionObjetos

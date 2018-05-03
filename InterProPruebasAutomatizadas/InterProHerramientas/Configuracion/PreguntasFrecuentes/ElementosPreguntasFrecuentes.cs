@@ -1,13 +1,10 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 
 
 namespace InterProHerramientas.Configuracion.PreguntasFrecuentes.Elementos
 {
-   
+
     [TestClass]
     //Clase para identificar los elementos de la sección de preguntas frecuentes.
     public class ElementosPreguntasFrecuentes
@@ -48,10 +45,11 @@ namespace InterProHerramientas.Configuracion.PreguntasFrecuentes.Elementos
         public IWebElement ElementosPreguntasActivarPregunta(IWebDriver driver)
         {
             //Identificar elemento para activar la pregunta.
-            IWebElement activar = driver.FindElement(By.Id("EsActivo"));
+            IWebElement activar = driver.FindElement(By.XPath("//*[@id='forma']/div[3]/div[2]/label"));
+            
             return activar;
         }
-        
+
         //Metodo para identificar elementos de de la sección de preguntas.
         public IWebElement ElementosPreguntasTextoPregunta(IWebDriver driver)
         {
@@ -125,12 +123,44 @@ namespace InterProHerramientas.Configuracion.PreguntasFrecuentes.Elementos
             return eliminarPregunta;
         }
 
-        //Metodo para identificar elementos de de la sección de preguntas.
-        public IWebElement ElementosPreguntasEditarPregunta(IWebDriver driver, int regitro)
+        //Metodo para identificar elementos de de la sección de preguntas.//*[@id="tabla-preguntas_paginate"]/span/a[1]
+        public IWebElement ElementosPreguntasEliminarPregunta(IWebDriver driver, int regitro)
         {
             //Identificar el elemento para eliminar pregunta pasada en el parametro del metodo el nombre.
             IWebElement editarPregunta = driver.FindElement(By.XPath("//*[@id='tabla-preguntas']/tbody/tr[" + regitro + "]/td[5]/i"));
             return editarPregunta;
+        }
+
+        //Metodo para identificar elementos de de la sección de preguntas.
+        public IWebElement ElementosPreguntaPaginado(IWebDriver driver, int pagina)
+        {
+            //Identifica los elementos del paginado
+            IWebElement paginado = driver.FindElement(By.XPath("//*[@id='tabla-preguntas_paginate']/span/a[" + pagina + "]"));
+            return paginado;
+        }
+
+        //Metodo para identificar elementos de de la sección de preguntas.
+        public IWebElement ElementosPreguntaRegistro(IWebDriver driver, int registro)
+        {
+            //Identificar el registro
+            IWebElement registroCapturado = driver.FindElement(By.XPath("//*[@id='tabla-preguntas']/tbody/tr[" + registro + "]/td[3]"));
+            return registroCapturado;
+        }
+
+        //Metodo para identificar elementos de de la sección de preguntas.
+        public IWebElement ElementosPeguntaEditarRegistro(IWebDriver driver, int registro)
+        {
+            //Identificar el registro
+            IWebElement registroCapturado = driver.FindElement(By.XPath("//*[@id='tabla-preguntas']/tbody/tr[" + registro + "]/td[5]/a"));
+            return registroCapturado;
+        }
+
+        //Metodo para identificar elementos de de la sección de preguntas.
+        public int ElementosEmpleadosNumeroRegistros(IWebDriver driver, int pagina)
+        {
+            //Identificar numero de paginas
+            var totalRegistros = driver.FindElements(By.XPath("//*[@id='tabla-preguntas']/tbody/tr[' ']/td[1]"));
+            return totalRegistros.Count;
         }
     }
 }

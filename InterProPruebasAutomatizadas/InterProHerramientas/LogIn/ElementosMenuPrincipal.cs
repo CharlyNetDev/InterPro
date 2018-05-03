@@ -26,5 +26,12 @@ namespace InterProHerramientas.LogIn
             IWebElement elementoMenu = driver.FindElement(By.Id("sub-opt-usuarios"));
             return elementoMenu;
         }
+
+        public IWebElement ElementoSubMenuPreguntasFrecuentes(IWebDriver driver)
+        {
+            IWebElement elementoMenu = driver.FindElement(By.Id("sub-opt-preguntas-frecuentes"));
+            return elementoMenu;
+        }
+
     }
 }
