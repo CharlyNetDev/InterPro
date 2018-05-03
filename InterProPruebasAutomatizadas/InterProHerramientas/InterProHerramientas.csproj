@@ -86,8 +86,10 @@
     <Compile Include="Comunes\Navegadores.cs" />
     <Compile Include="Configuracion\Empleados\ElementosEmpleados.cs" />
     <Compile Include="Configuracion\Empleados\ProcesoEmpleados.cs" />
+    <Compile Include="Configuracion\PreguntasFrecuentes\ProcesoPreguntasFrecuentes.cs" />
     <Compile Include="Configuracion\PreguntasFrecuentes\ElementosPreguntasFrecuentes.cs" />
     <Compile Include="Configuracion\Roles\ElementosRoles.cs" />
+    <Compile Include="Empresa\ElementosEmpresa.cs" />
     <Compile Include="LogIn\ElementosLogIn.cs" />
     <Compile Include="LogIn\ElementosMenuPrincipal.cs" />
     <Compile Include="LogIn\ProcesoLogIn.cs" />

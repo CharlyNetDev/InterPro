@@ -6,7 +6,7 @@ using OpenQA.Selenium;
 
 namespace InterProHerramientas.Clientes.Elementos
 {
-  
+
     public class ElementosClientes
     {
         //Metodo para identificar elementos de de la sección de clientes.
@@ -70,7 +70,7 @@ namespace InterProHerramientas.Clientes.Elementos
         public IWebElement ElementosClienteFechaNacimiento(IWebDriver driver)
         {
             //Identificar el elemento para Agregar la fecha de nacimiento del cliente.
-            IWebElement fechaNacimiento  = driver.FindElement(By.Id("fecha-picker"));
+            IWebElement fechaNacimiento = driver.FindElement(By.Id("fecha-picker"));
             return fechaNacimiento;
         }
 
@@ -179,12 +179,51 @@ namespace InterProHerramientas.Clientes.Elementos
         }
 
         //Metodo para identificar elementos de de la sección de clientes.
-        public IWebElement ElementosClientePestanaDatosUsuario(IWebDriver driver)
+        public IWebElement ElementosClienteSeleccionarPlan(IWebDriver driver, string plan)
         {
             //Identificar el elemento para seleccionar los datos del usuario.
-            IWebElement datosUsusarioCliente = driver.FindElement(By.Id("datos-tab"));
-            return datosUsusarioCliente;
+            IWebElement tipoPlan = driver.FindElement(By.Id("datos-tab"));
+            return tipoPlan;
         }
 
+        //Metodo para identificar elementos de de la sección de clientes.
+        public IWebElement ElementosClienteBuscarClienteNombre(IWebDriver driver)
+        {
+            //Identificar el elemento para buscar a un cliente Nombre del cliente.
+            IWebElement buscarCliente = driver.FindElement(By.Id("NombreCliente"));
+            return buscarCliente;
+        }
+
+        //Metodo para identificar elementos de de la sección de cliente.
+        public IWebElement ElementosClienteBuscarClienteRFC(IWebDriver driver)
+        {
+            //Identificar el elemento para buscar a un cliente por RFC.
+            IWebElement buscarCliente = driver.FindElement(By.Id("Rfc"));
+            return buscarCliente;
+        }
+
+        //Metodo para identificar elementos de de la sección de cliente.
+        public IWebElement ElementosClienteBuscarClienteTelefono(IWebDriver driver)
+        {
+            //Identificar el elemento para buscar a un cliente por telefono.
+            IWebElement buscarCliente = driver.FindElement(By.Id("Telefono"));
+            return buscarCliente;
+        }
+
+        //Metodo para identificar elementos de de la sección de cliente.
+        public IWebElement ElementosClienteBuscarClienteCorreo(IWebDriver driver)
+        {
+            //Identificar el elemento para buscar a un cliente por correo.
+            IWebElement buscarCliente = driver.FindElement(By.Id("Correo"));
+            return buscarCliente;
+        }
+
+        //Metodo para identificar elementos de de la sección de cliente.
+        public IWebElement ElementosClienteBuscarClienteTipoCliente(IWebDriver driver, int numeroTipo)
+        {
+            //Identificar el elemento para buscar a un cliente por correo.
+            IWebElement buscarCliente = driver.FindElement(By.Id("//*[@id='form-buscarclientes']/div[2]/div[3]/div/label[" + numeroTipo + "]"));
+            return buscarCliente;
+        }
     }
 }

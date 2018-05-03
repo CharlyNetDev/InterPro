@@ -5,7 +5,6 @@ using System.Threading;
 
 namespace InterProHerramientas.PlanesServicio
 {
-    [TestClass]
     public class ProcesoPlanServicio
     {
         Comunes.Navegadores navegadorPruba = new Comunes.Navegadores();
@@ -16,7 +15,7 @@ namespace InterProHerramientas.PlanesServicio
         Elementos.ElementosPlanServicio ElementosPlanServicioPrueba = new Elementos.ElementosPlanServicio();
         Comunes.GeneracionCadenas cadena = new Comunes.GeneracionCadenas();
 
-        [TestMethod]
+
         public bool ProcesoAltaPlanesServicioDatosObligatorios(string pathArchivo)
         {
             bool resultado = false;
@@ -668,7 +667,5 @@ namespace InterProHerramientas.PlanesServicio
 
             return resultado;
         }
-
-
     }
 }

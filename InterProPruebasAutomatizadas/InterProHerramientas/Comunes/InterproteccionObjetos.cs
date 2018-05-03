@@ -18,7 +18,10 @@
         public string NombreAnterior { get; set; }
         public string NombreUsuario { get; set; }
         public string CorreoElectronico { get; set; }
-
-
+        public string Categoria { get; set; }
+        public string Activar { get; set; }
+        public string Pregunta { get; set; }
+        public string Respuesta { get; set; }
+        public string TipoPrueba { get; set; }
     }
 }
