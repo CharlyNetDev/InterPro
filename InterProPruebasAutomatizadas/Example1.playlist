@@ -1,0 +1,1 @@
+<Playlist Version="1.0"><Add Test="InterProPruebasAutomatizadas.PruebasLogin.LogIn_001_ExitosoWEPID" /><Add Test="InterProPruebasAutomatizadas.pruebasEmpleados.Empleados_001_CreacionDatosObligatorios" /><Add Test="InterProPruebasAutomatizadas.PruebasPlanServicio.PlanServicio_001_CreacionDatosObligatorios" /></Playlist>
