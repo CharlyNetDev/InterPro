@@ -26,6 +26,28 @@ namespace InterProPruebasAutomatizadas
             Assert.AreEqual(true, preguntasFrecuentesWEPID.ProcesoEditarPregunta(pathArchivo));
         }
 
+        [TestMethod]
+        public void PreguntasFrecuentes_003_ValidacionCampos()
 
+        {
+            string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
+            Assert.AreEqual(true, preguntasFrecuentesWEPID.ProcesoValidacionDeCampos(pathArchivo));
+        }
+
+        [TestMethod]
+        public void PreguntasFrecuentes_004_ValidacionLongitudDeCampos()
+
+        {
+            string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
+            Assert.AreEqual(true, preguntasFrecuentesWEPID.ProcesoValidacionDeLongitudCampos(pathArchivo));
+        }
+
+        [TestMethod]
+        public void PreguntasFrecuentes_004_EliminarPregunta()
+
+        {
+            string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
+            Assert.AreEqual(true, preguntasFrecuentesWEPID.ProcesoEliminarPregunta(pathArchivo));
+        }
     }
 }

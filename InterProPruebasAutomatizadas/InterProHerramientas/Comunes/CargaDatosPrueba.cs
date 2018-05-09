@@ -91,7 +91,8 @@ namespace InterProHerramientas.Comunes
                                  Activar = row["Activar"].Cast<string>(),
                                  Pregunta = row["Pregunta"].Cast<string>(),
                                  Respuesta = row["Respuesta"].Cast<string>(),
-                                 TipoPrueba = row["TipoPrueba"].Cast<string>()
+                                 TipoPrueba = row["TipoPrueba"].Cast<string>(),
+                                 PreguntaEditada = row["PreguntaEditada"].Cast<string>()
                              }
                              select item).ToList();
             book.Dispose();

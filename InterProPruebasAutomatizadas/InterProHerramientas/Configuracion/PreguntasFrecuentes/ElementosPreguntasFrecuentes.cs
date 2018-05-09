@@ -111,7 +111,7 @@ namespace InterProHerramientas.Configuracion.PreguntasFrecuentes.Elementos
         {
             //Identificar el elemento para activar o inactivar la pregunta pasada en el parametro del metodo el nombre.
             ////*[@data-nombre-pregunta-estatus="Pregunta 1 de servicio producto"]
-            IWebElement estatusPregunta = driver.FindElement(By.XPath("//*[@data-nombre-pregunta-estatus" + nombrePregunta + "']"));
+            IWebElement estatusPregunta = driver.FindElement(By.XPath("//*[@data-nombre-pregunta-estatus = '" + nombrePregunta + "']"));
             return estatusPregunta;
         }
 
@@ -119,7 +119,7 @@ namespace InterProHerramientas.Configuracion.PreguntasFrecuentes.Elementos
         public IWebElement ElementosPreguntasEliminarPregunta(IWebDriver driver, string nombrePregunta)
         {
             //Identificar el elemento para eliminar pregunta pasada en el parametro del metodo el nombre.
-            IWebElement eliminarPregunta = driver.FindElement(By.XPath("//*[@data-nombre-pregunta" + nombrePregunta + "']"));
+            IWebElement eliminarPregunta = driver.FindElement(By.XPath("//*[@data-nombre-pregunta = '" + nombrePregunta + "']"));
             return eliminarPregunta;
         }
 
@@ -129,6 +129,12 @@ namespace InterProHerramientas.Configuracion.PreguntasFrecuentes.Elementos
             //Identificar el elemento para eliminar pregunta pasada en el parametro del metodo el nombre.
             IWebElement editarPregunta = driver.FindElement(By.XPath("//*[@id='tabla-preguntas']/tbody/tr[" + regitro + "]/td[5]/i"));
             return editarPregunta;
+        }
+
+        public IWebElement ElementosPreguntasConfirmarEliminar(IWebDriver driver)
+        {
+            IWebElement confirmarEliminar = driver.FindElement(By.Id("btn-modal-confirmar"));
+            return confirmarEliminar;
         }
 
         //Metodo para identificar elementos de de la sección de preguntas.
