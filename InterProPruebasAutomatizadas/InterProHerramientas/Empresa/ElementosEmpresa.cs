@@ -8,11 +8,17 @@ namespace InterProHerramientas.Empresa.Elementos
 {
     public class ElementosEmpresa
     {
+
+        /********************************************************/
+        // SECCION DE CREAR NUEVA EMPRESA
+        /********************************************************/
+
+        #region CREAR NUEVA EMPRESA
         //Metodo para identificar elementos de de la sección de empresas.
         public IWebElement ElementoEmpresaAgregar(IWebDriver driver)
         {
             //Identificar el elemento Agregar una Empresa nuevo.
-            IWebElement agregarEmpresa = driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[2]/div[3]/a"));
+            IWebElement agregarEmpresa = driver.FindElement(By.XPath("//div[3]/a"));
             return agregarEmpresa;
         }
 
@@ -28,7 +34,7 @@ namespace InterProHerramientas.Empresa.Elementos
         public IWebElement ElementoEmpresaCancelar(IWebDriver driver)
         {
             //Identificar el elemento Cancelar una Empresa nuevo.
-            IWebElement cancelarEmpresa = driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[2]/div[2]/a"));
+            IWebElement cancelarEmpresa = driver.FindElement(By.XPath("//div[2]/div[2]/a"));
             return cancelarEmpresa;
         }
 
@@ -49,11 +55,18 @@ namespace InterProHerramientas.Empresa.Elementos
         }
 
         //Metodo para identificar elementos de de la sección de empresas.
-        public IWebElement ElementoEmpresaTipoClienteEmpresa(IWebDriver driver)
+        public IWebElement ElementoEmpresaTipoEmpresa(IWebDriver driver)
         {
             //Identificar el elemento seleccionar el tipo de la Empresa.
-            IWebElement tipoEmpresa = driver.FindElement(By.Id("TipoEmpresa"));
+            IWebElement tipoEmpresa = driver.FindElement(By.XPath("//div[2]/input"));
             return tipoEmpresa;
+        }
+
+        public IWebElement ElementoEmpresaTipoBanco(IWebDriver driver)
+        {
+            //Identificar el elemento seleccionado de tipo Banco
+            IWebElement tipoBanco = driver.FindElement(By.XPath("//div[3]/input"));
+            return tipoBanco;
         }
 
         //Metodo para identificar elementos de de la sección de empresas.
@@ -75,7 +88,7 @@ namespace InterProHerramientas.Empresa.Elementos
         //Metodo para identificar elementos de de la sección de empresas.
         public IWebElement ElementoEmpresaCorreoContatoUno(IWebDriver driver)
         {
-            //Identificar el elemento para capturar el RFC de una Empresa.
+            //Identificar el elemento para capturar el Correo electrónico.
             IWebElement correoContactoEmpresaUno = driver.FindElement(By.Id("empresa_CorreoElectronicoContacto"));
             return correoContactoEmpresaUno;
         }
@@ -83,7 +96,7 @@ namespace InterProHerramientas.Empresa.Elementos
         //Metodo para identificar elementos de de la sección de empresas.
         public IWebElement ElementoEmpresaTelefonoContatoUno(IWebDriver driver)
         {
-            //Identificar el elemento para capturar el RFC de una Empresa.
+            //Identificar el elemento para capturar el Teléfono.
             IWebElement telefonoContactoEmpresaUno = driver.FindElement(By.Id("empresa_TelefonoContacto"));
             return telefonoContactoEmpresaUno;
         }
@@ -143,7 +156,13 @@ namespace InterProHerramientas.Empresa.Elementos
             IWebElement telefonoContactoNotas = driver.FindElement(By.Id("empresa_Notas"));
             return telefonoContactoNotas;
         }
+        #endregion
 
+        /********************************************************/
+        //ELEMENTOS PARA LA CONSULTA DE CLIENTES Y EMPRESAS
+        /********************************************************/
+
+        #region ELEMENTOS PARA LA CONSULTA DE CLIENTES Y EMPRESAS
         //Metodo para identificar elementos de de la sección de empresas.
         public IWebElement ElementoEmpresaPestanaEmpresa(IWebDriver driver)
         {
@@ -188,8 +207,93 @@ namespace InterProHerramientas.Empresa.Elementos
         public IWebElement ElementoEmpresaConsultar(IWebDriver driver)
         {
             //Identificar el elemento para capturar el nombre de la empresa a buscar.
-            IWebElement consultarEmpresa = driver.FindElement(By.Id("empresa"));
+            IWebElement consultarEmpresa = driver.FindElement(By.XPath("//div[2]/button"));
             return consultarEmpresa;
         }
+        public IWebElement ElementoEmpresaRegresarDeConsulta(IWebDriver driver)
+        {
+            //Identificar el elemento para capturar el nombre de la empresa a buscar.
+            IWebElement regresarDeConsultaEmpresa = driver.FindElement(By.XPath("//div[2]/div[2]/a"));
+            return regresarDeConsultaEmpresa;
+        }
+
+        #endregion
+
+        /********************************************************/
+        //ELEMENTOS PARA GENERAR CÓDIGOS DE ACTIVACIÓN - EMPRESAS
+        /********************************************************/
+
+        #region ELEMENTOS PARA GENERAR CÓDIGOS DE ACTIVACIÓN - EMPRESAS
+        //Metodo para identificar elementos de PESTAÑA GENERAR CÓDIGOS DE ACTIVACIÓN
+        public IWebElement ElementoEmpresaGenerarCodigosActivacionSeccionGenerarCodigoActivacion(IWebDriver driver)
+        {
+            IWebElement seccionGenerarCodigoActivacion = driver.FindElement(By.Id("contact-tab"));
+            return seccionGenerarCodigoActivacion;
+        }
+
+        //Metodo para identificar elementos de CODIGO FIJO
+        public IWebElement ElementoEmpresaGenerarCodigosActivacionCodigoFijo(IWebDriver driver)
+        {
+            IWebElement codigoFijo = driver.FindElement(By.Id("TipoCodigoFijo"));
+            return codigoFijo;
+        }
+
+        //Metodo para identificar elementos de CODIGO FIJO - CANTIDAD DE CLAVES GENERAR
+        public IWebElement ElementoEmpresaGenerarCodigosActivacionCantidadClaves(IWebDriver driver)
+        {
+            IWebElement cantidadClaves = driver.FindElement(By.Id("codigoLote-cantidad"));
+            return cantidadClaves;
+        }
+
+        //Metodo para identificar elementos de CODIGO FIJO - TIPO PLAN
+        public IWebElement ElementoEmpresaGenerarCodigosActivacionTipoPlan(IWebDriver driver)
+        {
+            IWebElement tipoPlan = driver.FindElement(By.Id("GuidTipoPlan"));
+            return tipoPlan;
+        }
+
+        //Metodo para identificar elementos de CODIGO FIJO - TIENE SERVICIO DESDE
+        public IWebElement ElementoEmpresaGenerarCodigosActivacionServicioDesde(IWebDriver driver)
+        {
+            IWebElement x = driver.FindElement(By.Id("fecha-picker2"));
+            return x;
+        }
+
+        //Metodo para identificar elementos de CODIGO FIJO - TIENE SERVICIO HASTA
+        public IWebElement ElementoEmpresaGenerarCodigosActivacionServicioHasta(IWebDriver driver)
+        {
+            IWebElement servicioHasta = driver.FindElement(By.Id("fecha-picker3"));
+            return servicioHasta;
+        }
+
+        //Metodo para identificar elementos de CODIGO MOVIL - TIPO PLAN
+        public IWebElement ElementoEmpresaGenerarCodigosActivacionCodigoMovil(IWebDriver driver)
+        {
+            IWebElement codigoMovil = driver.FindElement(By.Id("TipoCodigoMovil"));
+            return codigoMovil;
+        }
+
+        //Metodo para identificar elementos de CODIGO MOVIL - TIENE SERVICIO HASTA
+        public IWebElement ElementoEmpresaGenerarCodigosActivacionActivarAntesDel(IWebDriver driver)
+        {
+            IWebElement activarAntesDel = driver.FindElement(By.Id("fecha-picker"));
+            return activarAntesDel;
+        }
+
+        //Metodo para identificar elementos de CODIGO MOVIL - TIENE SERVICIO HASTA
+        public IWebElement ElementoEmpresaGenerarCodigosActivacionPeriodoVigencia(IWebDriver driver)
+        {
+            IWebElement periodoVigencia = driver.FindElement(By.Id("GuidPeriodo"));
+            return periodoVigencia;
+        }
+
+        //Metodo para identificar elementos de BOTÓN - GENERAR
+        public IWebElement ElementoEmpresaGenerarCodigosActivacionBotonGenerarCodigoActivacion(IWebDriver driver)
+        {
+            IWebElement botonGenerarCodigoAvtivacion = driver.FindElement(By.Id("GuidPeriodo"));
+            return botonGenerarCodigoAvtivacion;
+        }
+        #endregion
+
     }
 }

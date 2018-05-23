@@ -61,8 +61,10 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PruebasClientes.cs" />
+    <Compile Include="PruebasNotificaciones.cs" />
     <Compile Include="PruebasPreguntasFrecuentes.cs" />
-    <Compile Include="pruebasEmpleados.cs" />
+    <Compile Include="PruebasEmpleados.cs" />
     <Compile Include="PruebasLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PruebasPlanServicio.cs" />

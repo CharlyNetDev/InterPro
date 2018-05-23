@@ -40,6 +40,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="LinqToExcel, Version=1.11.0.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=MSIL">
       <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
       <Private>True</Private>
@@ -78,7 +81,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clientes\ElementosClientes.cs" />
+    <Compile Include="Clientes\ProcesoClientes.cs" />
     <Compile Include="Comunes\CargaDatosPrueba.cs" />
+    <Compile Include="Comunes\Soporte.cs" />
     <Compile Include="Comunes\GeneracionCadenas.cs" />
     <Compile Include="Comunes\InterproteccionObjetos.cs" />
     <Compile Include="Comunes\Navegadores.cs" />
@@ -88,11 +93,14 @@
     <Compile Include="Configuracion\PreguntasFrecuentes\ElementosPreguntasFrecuentes.cs" />
     <Compile Include="Configuracion\Roles\ElementosRoles.cs" />
     <Compile Include="Empresa\ElementosEmpresa.cs" />
+    <Compile Include="Empresa\ProcesoEmpresa.cs" />
     <Compile Include="LogIn\ElementosLogIn.cs" />
     <Compile Include="LogIn\ElementosMenuPrincipal.cs" />
     <Compile Include="LogIn\ProcesoLogIn.cs" />
     <Compile Include="Configuracion\PlanesServicio\ElementosPlanServicio.cs" />
     <Compile Include="Configuracion\PlanesServicio\ProcesoPlanServicio.cs" />
+    <Compile Include="Notificacion\ElementosNotificaciones.cs" />
+    <Compile Include="Notificacion\ProcesoNotificaciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

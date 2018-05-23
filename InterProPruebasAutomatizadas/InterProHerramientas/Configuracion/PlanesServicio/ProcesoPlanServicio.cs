@@ -370,12 +370,24 @@ namespace InterProHerramientas.PlanesServicio
 
                                     ElementosPlanServicioPrueba.ElementosPlanServicioEstatusPlan(driver, listaDatosPrueba[i].NombrePlan).Click();
                                     ElementosPlanServicioPrueba.ElementosPlanServicioInactivarPlanConfirmar(driver).Click();
+
                                     Thread.Sleep(2000);
                                     if (ElementosPlanServicioPrueba.ElementosPlanServicioEstatusPlan(driver, listaDatosPrueba[i].NombrePlan).Text.Equals("INACTIVO"))
                                     {
-                                        resultado = true;
-                                        buscar = false;
-                                        break;
+                                        //Activar el plan
+
+                                        int elemPosActivar = ((ElementosPlanServicioPrueba.ElementosPlanServicioEstatusPlan(driver, listaDatosPrueba[i].NombrePlan)).Location.Y) - 100;
+                                        ((IJavaScriptExecutor)driver).ExecuteScript("window.scroll(0, " + elemPos + ");");
+
+                                        ElementosPlanServicioPrueba.ElementosPlanServicioEstatusPlan(driver, listaDatosPrueba[i].NombrePlan).Click();
+                                        ElementosPlanServicioPrueba.ElementosPlanServicioInactivarPlanConfirmar(driver).Click();
+
+                                        if (ElementosPlanServicioPrueba.ElementosPlanServicioEstatusPlan(driver, listaDatosPrueba[i].NombrePlan).Text.Equals("ACTIVO"))
+                                        {
+                                            resultado = true;
+                                            buscar = false;
+                                            break;
+                                        }
                                     }
                                 }
                             }

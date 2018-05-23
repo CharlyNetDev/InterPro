@@ -10,44 +10,42 @@ namespace InterProPruebasAutomatizadas
     public class PruebasPreguntasFrecuentes
     {
         InterProHerramientas.Configuracion.PreguntasFrecuentes.Proceso.ProcesoPreguntasFrecuentes preguntasFrecuentesWEPID = new InterProHerramientas.Configuracion.PreguntasFrecuentes.Proceso.ProcesoPreguntasFrecuentes();
+        InterProHerramientas.Comunes.Soporte constantesTest = new InterProHerramientas.Comunes.Soporte(); 
+
         [TestMethod]
         public void PreguntasFrecuentes_001_CreacionDatosObligatorios()
 
         {
-            string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, preguntasFrecuentesWEPID.ProcesoAltaPreguntaCamposObligatorios(pathArchivo));
+            Assert.AreEqual(true, preguntasFrecuentesWEPID.ProcesoAltaPreguntaCamposObligatorios(constantesTest.PathArchivo()));
         }
 
         [TestMethod]
         public void PreguntasFrecuentes_002_EdicionPregunta()
 
         {
-            string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, preguntasFrecuentesWEPID.ProcesoEditarPregunta(pathArchivo));
+            Assert.AreEqual(true, preguntasFrecuentesWEPID.ProcesoEditarPregunta(constantesTest.PathArchivo()));
         }
 
         [TestMethod]
         public void PreguntasFrecuentes_003_ValidacionCampos()
 
         {
-            string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, preguntasFrecuentesWEPID.ProcesoValidacionDeCampos(pathArchivo));
+            Assert.AreEqual(true, preguntasFrecuentesWEPID.ProcesoValidacionDeCampos(constantesTest.PathArchivo()));
         }
 
         [TestMethod]
         public void PreguntasFrecuentes_004_ValidacionLongitudDeCampos()
 
         {
-            string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, preguntasFrecuentesWEPID.ProcesoValidacionDeLongitudCampos(pathArchivo));
+            Assert.AreEqual(true, preguntasFrecuentesWEPID.ProcesoValidacionDeLongitudCampos(constantesTest.PathArchivo()));
         }
 
         [TestMethod]
         public void PreguntasFrecuentes_004_EliminarPregunta()
 
         {
-            string pathArchivo = ("C:\\Users\\User\\source\\repos\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, preguntasFrecuentesWEPID.ProcesoEliminarPregunta(pathArchivo));
+            Assert.AreEqual(true, preguntasFrecuentesWEPID.ProcesoEliminarPregunta(constantesTest.PathArchivo()));
         }
+        
     }
 }

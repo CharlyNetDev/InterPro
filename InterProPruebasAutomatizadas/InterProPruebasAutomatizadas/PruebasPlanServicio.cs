@@ -45,19 +45,19 @@ namespace InterProPruebasAutomatizadas
             Assert.AreEqual(true, planServcioWEPID.ProcesoAltaPlanesServicioValidarDuplicado(pathArchivo));
         }
 
-        [TestMethod]
-        public void PlanServicio_006_InactivarPlan()
+        //[TestMethod]
+        public void PlanServicio_006_InactivarPlanYActivarPlan()
         {
             string pathArchivo = ("C:\\source\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
             Assert.AreEqual(true, planServcioWEPID.ProcesoAltaPlanesServicioInactivarPlan(pathArchivo));
         }
 
-        [TestMethod]
-        public void PlanServicio_007_ActivarPlan()
-        {
-            string pathArchivo = ("C:\\source\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, planServcioWEPID.ProcesoAltaPlanesServicioActivarPlan(pathArchivo));
-        }
+       //// [TestMethod]
+       // public void PlanServicio_007_ActivarPlan()
+       // {
+       //     string pathArchivo = ("C:\\source\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
+       //     Assert.AreEqual(true, planServcioWEPID.ProcesoAltaPlanesServicioActivarPlan(pathArchivo));
+       // }
 
         [TestMethod]
         public void PlanServicio_008_EditarPlanCamposObligatorios()

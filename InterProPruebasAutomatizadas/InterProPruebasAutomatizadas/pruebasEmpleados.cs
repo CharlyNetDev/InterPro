@@ -6,54 +6,47 @@ using Microsoft.VisualStudio.TestTools;
 namespace InterProPruebasAutomatizadas
 {
     [CodedUITest]
-    public class pruebasEmpleados
+    public class PruebasEmpleados
     {
         InterProHerramientas.Empleados.ProcesoEmpleados empleadosWEPID = new InterProHerramientas.Empleados.ProcesoEmpleados();
+        InterProHerramientas.Comunes.Soporte constantesTest = new InterProHerramientas.Comunes.Soporte();
 
         public TestContext TestContext { get; set; }
 
-        private const string _OrderedTestFilename = "TestList.csv";
-               
         [TestMethod]
         public void Empleados_001_CreacionDatosObligatorios()
         {
-            string pathArchivo = ("C:\\source\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, empleadosWEPID.AltaEmpleadoDatosObligatorios(pathArchivo));
+            Assert.AreEqual(true, empleadosWEPID.AltaEmpleadoDatosObligatorios(constantesTest.PathArchivo()));
         }
 
         [TestMethod]
         public void Empleados_002_ValidacionCamposObligatorios()
         {
-            string pathArchivo = ("C:\\source\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, empleadosWEPID.EmpleadoValidarCampos(pathArchivo));
+            Assert.AreEqual(true, empleadosWEPID.EmpleadoValidarCampos(constantesTest.PathArchivo()));
         }
 
         [TestMethod]
         public void Empleados_003_ValidacionCamposLongitud()
         {
-            string pathArchivo = ("C:\\source\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, empleadosWEPID.EmpleadosValidarLongitudCampos(pathArchivo));
+            Assert.AreEqual(true, empleadosWEPID.EmpleadosValidarLongitudCampos(constantesTest.PathArchivo()));
         }
 
         [TestMethod]
         public void Empleados_004_ValidacionUsuarioDuplicado()
         {
-            string pathArchivo = ("C:\\source\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, empleadosWEPID.EmpleadosValidacionUsuarioDuplicado(pathArchivo));
+            Assert.AreEqual(true, empleadosWEPID.EmpleadosValidacionUsuarioDuplicado(constantesTest.PathArchivo()));
         }
 
         [TestMethod]
         public void Empleados_005_ValidacionEliminarUsuario()
         {
-            string pathArchivo = ("C:\\source\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, empleadosWEPID.EmpleadosValidarEliminar(pathArchivo));
+            Assert.AreEqual(true, empleadosWEPID.EmpleadosValidarEliminar(constantesTest.PathArchivo()));
         }
 
         [TestMethod]
         public void Empleados_006_ValidacionReactivacionUsuario()
         {
-            string pathArchivo = ("C:\\source\\InterPro\\InterProPruebasAutomatizadas\\InterProHerramientas\\comunes\\DatosPrueba.xlsx");
-            Assert.AreEqual(true, empleadosWEPID.EmpleadosReactivacionDatosObligatorios(pathArchivo));
+            Assert.AreEqual(true, empleadosWEPID.EmpleadosReactivacionDatosObligatorios(constantesTest.PathArchivo()));
         }
     }
 }

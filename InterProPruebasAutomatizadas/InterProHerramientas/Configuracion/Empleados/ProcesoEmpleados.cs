@@ -63,7 +63,7 @@ namespace InterProHerramientas.Empleados
                             Thread.Sleep(2000);
                             for (int indice = 1; indice <= elementosEmpleadosPrueba.ElementosEmpleadosNumeroRegistros(driver, pagina); indice++)
                             {
-                                if (elementosEmpleadosPrueba.ElementosEmpleadosRegistro(driver, indice).Text.Equals(listaDatosPrueba[i].NombreUsuario))
+                                if (elementosEmpleadosPrueba.ElementosEmpleadosRegistro(driver, indice).Text.Equals(listaDatosPrueba[i].PlanContratado))
                                 {
                                     resultado = true;
                                     buscar = false;
@@ -157,10 +157,13 @@ namespace InterProHerramientas.Empleados
                         elementosEmpleadosPrueba.ElementosEmpleadosNombreDelUsuario(driver).SendKeys(cadenaNombreUsuario);
                         elementosEmpleadosPrueba.ElementosEmpleadosCorreElectronico(driver).SendKeys(listaDatosPrueba[i].CorreoElectronico);
 
+                        SelectElement select = new SelectElement(elementosEmpleadosPrueba.ElementosEmpleadosRol(driver));
+                        select.SelectByText(listaDatosPrueba[i].Rol);
+
                         elementosEmpleadosPrueba.ElementosEmpleadosBotonCrearEmpleado(driver).Click();
 
                         //Mensaje de longitud de campos
-                        if (elementosEmpleadosPrueba.ElementosEmpleadosMensajeNombreValidacionLongitu(driver).Text.Equals("El tamaño máximo es de 35 caracteres"))
+                        if (elementosEmpleadosPrueba.ElementosEmpleadosMensajeNombreValidacionLongitu(driver).Text.Equals("El tamaño máximo es de 110 caracteres"))
                             resultado = true;
                     }
                 }
