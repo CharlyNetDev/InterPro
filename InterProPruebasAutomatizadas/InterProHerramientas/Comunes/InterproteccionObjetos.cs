@@ -12,8 +12,10 @@
         public string NombrePlan { get; set; }
         public string CostoPlan { get; set; }
         public string Descripcion { get; set; }
-        public string ServicioBuro { get; set; }
         public string ServicioTarjeta { get; set; }
+        public string ConsutltaReporte { get; set; }
+
+        public string ConsultaAlertas { get; set; }
         public string Tipo { get; set; }
         public string NombreAnterior { get; set; }
         public string NombreUsuario { get; set; }

@@ -41,7 +41,8 @@ namespace InterProHerramientas.Comunes
                                  NombrePlan = row["NombrePlan"].Cast<string>(),
                                  CostoPlan = row["CostoPlan"].Cast<string>(),
                                  Descripcion = row["Descripcion"].Cast<string>(),
-                                 ServicioBuro = row["ServicioBuro"].Cast<string>(),
+                                 ConsutltaReporte = row["ConsutltaReporte"].Cast<string>(),
+                                 ConsultaAlertas = row["ConsultaAlertas"].Cast<string>(),
                                  ServicioTarjeta = row["ServicioTarjeta"].Cast<string>(),
                                  Tipo = row["Tipo"].Cast<string>(),
                                  NombreAnterior = row["NombreAnterior"].Cast<string>()
